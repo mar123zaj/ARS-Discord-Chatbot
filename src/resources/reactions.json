@@ -1,0 +1,55 @@
+[
+    {
+        "name": "ZOBACZY_ADOREX",
+        "type": "meme",
+        "meme": {
+            "files": [
+                "https://s1.imghub.io/m3jXM.png"
+            ]
+        },
+        "keyWords1": [
+            "ado"
+        ],
+        "keyWords2": [
+            "zobaczy"
+        ]
+    },
+    {
+        "name": "MAM_POMYSLA",
+        "type": "meme",
+        "meme": {
+            "files": [
+                "https://s1.imghub.io/m3ZY2.png"
+            ]
+        },
+        "keyWords1": [
+            "pomysl",
+            "pomysla",
+            "pomysł",
+            "pomysła"
+        ],
+        "keyWords2": []
+    },
+    {
+        "name": "ZIGIZONG",
+        "type": "meme",
+        "meme": {
+            "content": "https://www.youtube.com/watch?v=6oX3vJNhVso"
+        },
+        "keyWords1": [
+            "zigizong"
+        ],
+        "keyWords2": []
+    },
+    {
+        "name": "SBINALLA",
+        "type": "emoji",
+        "emojiName": "seb",
+        "keyWords1": [
+            "spin",
+            "sbinalla",
+            ":seb:"
+        ],
+        "keyWords2": []
+    }
+]
