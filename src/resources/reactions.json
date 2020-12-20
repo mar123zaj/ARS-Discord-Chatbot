@@ -44,11 +44,11 @@
     {
         "name": "SBINALLA",
         "type": "emoji",
-        "emojiName": "seb",
+        "emojiName": "vettel",
         "keyWords1": [
             "spin",
             "sbinalla",
-            ":seb:"
+            ":vettel:"
         ],
         "keyWords2": []
     }
