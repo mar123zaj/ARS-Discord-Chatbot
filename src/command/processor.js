@@ -1,6 +1,7 @@
 const { readdirSync } = require('fs')
 const path = require("path");
 const discord = require("../services/discord");
+const isBannedCommand = require("./commands/banned/isBannedCommand");
 
 const generalCommands = (() => {
     const commandsPath = "/commands/general/"
@@ -20,9 +21,14 @@ const isAdminCommand = (commandName) => adminCommands.includes(commandName);
 
 module.exports = ({ message, client }) => {
     const { content, member } = message;
-    const [commandName, ...arguments] = content.substring(1).split(" ");
-    const isAdmin = discord.isAdmin(member);
+    const [command, ...arguments] = content.substring(1).split(" ");
+    const commandName = command.toLowerCase();
+    
+    if(isBannedCommand(commandName))
+        return;
+
     if (commandExists(commandName)) {
+        const isAdmin = discord.isAdmin(member);
         if (isAdminCommand(commandName) && isAdmin) {
             const command = require(`./commands/admin/${commandName}`);
             return command.execute({ arguments, message, client });

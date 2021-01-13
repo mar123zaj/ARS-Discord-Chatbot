@@ -14,5 +14,5 @@ module.exports.eventMessageProcessor = async (message, client) => {
         await commandProcessor({ message, client });
     else
         await reactionsProcessor({ message, client });
-    
+
 }
