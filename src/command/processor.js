@@ -26,9 +26,8 @@ module.exports = ({ message, client }) => {
     
     if(isBannedCommand(commandName))
         return;
-
+    const isAdmin = discord.isAdmin(member);
     if (commandExists(commandName)) {
-        const isAdmin = discord.isAdmin(member);
         if (isAdminCommand(commandName) && isAdmin) {
             const command = require(`./commands/admin/${commandName}`);
             return command.execute({ arguments, message, client });
