@@ -5,7 +5,7 @@ const discord = require("../services/discord");
 const generalCommands = (() => {
     const commandsPath = "/commands/general/"
     const files = readdirSync(path.join(__dirname, commandsPath));
-    return files.map(fileName => fileName.replace(".js", ""))
+    return files.map(fileName => fileName.replace(".js", "")).filter(fileName => fileName !== "resources")
 })();
 
 const adminCommands = (() => {
